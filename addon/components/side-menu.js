@@ -137,7 +137,9 @@ export default Component.extend({
         let runOpenMenuSlightly;
         const $rootNode = $(get(this, "rootNodeSelector"));
         const onTouchMove = (event) => {
-            event.preventDefault();
+            if (this._isTouchWithin(event, get(this, "slightlyOpenWidth"))) {
+                event.preventDefault();
+            }
 
             if (runOpenMenuSlightly) {
                 cancel(runOpenMenuSlightly);
