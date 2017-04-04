@@ -37,4 +37,8 @@ export default Component.extend({
     click() {
         get(this, "sideMenu").close();
     },
+
+    touchStart() {
+        get(this, "sideMenu").close();
+    },
 });
