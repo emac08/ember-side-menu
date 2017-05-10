@@ -73,7 +73,7 @@ export default Component.extend({
         const unit = isSlightlyOpen ? "px" : "%";
         const progress = isSlightlyOpen ? slightlyOpenWidth : get(this, "progress");
 
-        return `transform: translateX(${direction}${progress}${unit});`;
+        return `transform: translateX(${direction}${progress}${unit}); -webkit-transform: translateX(${direction}${progress}${unit}); -ms-transform: translateX(${direction}${progress}${unit});`;
     }),
 
     style: computed(...styleProps, function () {
