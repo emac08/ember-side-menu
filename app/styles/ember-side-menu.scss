@@ -84,6 +84,7 @@ $side-menu-divider-bg: #e5e5e5;
   z-index: $content-backdrop-z-index;
   background-color: $content-backdrop-bg;
   opacity: 0;
+  cursor: pointer;
   visibility: hidden;
   will-change: opacity;
 }
